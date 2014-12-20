@@ -1,0 +1,124 @@
+<html>
+	<head>
+		<title >Form</title>
+		<script type="text/javascript">
+
+
+		</script>
+	</head>
+	<body align="left" background="LMS.jpg">
+
+	
+
+		<h2 style="color: black;text-align:center;background-color:#6495ed">Library Managment System</h2>
+		
+		<select name="menu1" style="background-color: #6495ed;margin:-5px;border: 0px;font-weight: 700;font-size: 1.4em" onChange="check1(this.value)">
+					<option value="Search" >Search</option>		
+					<option value="1">Search a Student</option>
+					<option value="2">search a Teacher</option>
+					<option value="3">search a Order</option>
+					<option value="4">search a Book</option>
+					
+		</select>
+		<select name="menu2" style="background-color: #6495ed;margin:-1px;border: 0px;font-weight: 700 ;font-size: 1.4em" onChange="check2(this.value)">
+					<option value="" >Add</option>		
+					<option value="a">Add a Student</option>
+					<option value="b">Add a Teacher</option>
+					<option value="c">Add a Order</option>
+					<option value="d">Add a Book</option>
+					
+		</select>
+		<select name="menu3" style="background-color: #6495ed;margin:-3px;border: 0px;font-weight: 700 ;font-size: 1.4em">
+					<option value="" >Delete</option>		
+					<option value="1">Delete a Book</option>
+					<option value="2">Delete a Order</option>
+					
+		</select>
+		<select name="menu4" style="background-color: #6495ed;margin:-3px;border: 0px;font-weight: 700 ;font-size: 1.4em">
+					<option value="" >View</option>		
+					<option value="1">View a Book</option>
+					<option value="2">View a Order</option>
+					<option value="3">View a Student</option>
+					<option value="4">View a Teacher</option>
+					<option value="5">View a Employee</option>
+					
+					
+		</select>
+		<select name="menu5" style="background-color: #6495ed;margin:-3px;border: 0px;font-weight: 700 ;font-size: 1.4em">
+					<option value="" >Order</option>		
+					<option value="1">Give an Order</option>
+					<option value="2">Recieve an Order</option>
+					
+		</select>
+		<select name="menu6" style="background-color: #6495ed;margin:-1px;border: 0px;font-weight: 700 ;font-size: 1.4em" onChange="check6(this.value)">
+					<option value="" >Issue</option>		
+					<option value="1">Issue Book</option>
+					<option value="1">Return Book</option>
+					
+					
+		</select>
+		<select name="menu7" style="background-color: #6495ed;margin:-3px;border: 0px;font-weight: 700 ;font-size: 1.4em" onChange="check7(this.value)">
+					<option value="" >Fine</option>		
+					<option value="1">Calculate fine</option>
+					
+					
+		</select>
+		<select name="menu8" style="background-color: #6495ed;margin:-1px;border: 0px;font-weight: 700 ;font-size: 1.4em">
+					<option value="" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>		
+					
+					
+		</select>
+		
+		</br>
+		</br>
+		</br>
+		</br>
+		
+
+		<form name="form7" id="form7" method="POST" action="status">
+		
+		<table border="0" align="left">
+		    <tr >
+			 
+			<td>
+
+				<h2 color="Blue" align="center">Staus Of a Book</h2>
+				<br/>
+			</td >
+		   </tr>
+		   <tr >
+			 
+			<td align=center>
+				Enter Book id :<input type="text" name="isbn" >
+
+				</br>
+
+				</br>
+			</td >
+		   </tr>
+		   <tr >
+			 
+			<td>
+				<input type="radio" name="id" value="Available">Available
+				<input type="radio" name="id" value="Not Available">Not Available
+				<input type="radio" name="id" value="Binding">Binding
+				<input type="radio" name="id" value="New Arrival">New Arrival
+
+
+
+				<br/>
+			</td >
+		   </tr>
+		  
+		   <tr align=center>
+			<td>
+				</br>
+				</br>
+				<input type="submit"   onclick="verify()" value="Update Status">
+			</td>
+		   </tr>
+		</table>
+			
+		</form>
+	</body>
+</html>
