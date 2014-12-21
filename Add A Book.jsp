@@ -5,67 +5,26 @@
 
 		function verify()
 			{
-				alert("in function");
-				if (!document.form2.gender[0].checked && !document.form2.gender[1].checked)
-				{
-					alert("Please choose a Gender");
-				}
-				var s1=document.form2.name1.value;
+				
+				var s1=document.form3.title.value;
 				if(s1.length>20 || s1=="")
 				{
-					alert("Name is either empty or have characters greater than 20");
-				}
-				var s2=document.form2.name2.value;
-				if(s2=="" || s2.length>20)
-				{
-					alert("Last Name is either empty or have characters greater than 20");
-				}
-				
-				var s3=document.form2.address.value;
-				for(i=0;i<s3.length;i++)
-				{
-					if((s3[i]>='a' && s3[i]<='z') || s3[i]=='@' || s3[i]=='%' || s3[i]=='$' || s3[i]=='+' || s3[i]=='-' || s3[i]=='?')
-					{
-						alert("Address can not include small letters or symbols");
-						break;
-					}
+					alert("TiTle is either empty or have characters greater than 20");
 					
 				}
-				
-				if ( document.form2.country.value == "" )
-				{
-					
-					alert("Please select a country");
-				}
-				var s8=document.form2.p_no.value;
-				var i=0;
-				for(i=0;i<s8.length;i++)
-				{
-					if(!(s8[i]>='0' && s8[i]<='9'))
-					{
-						alert("Phone number can only contain digits");
-						break;
-					}
-					if(i>10)
-					{
-						alert("Phone number can only contain 11 digits");
-						break;
-					}
-				}
-				
 				
 			}
-			function check1(val)
+		function check1(val)
 		{
 			
 			if(val=="1")
 			{
-				window.location.assign("http://localhost:8080/IP/Search%20a%20student.html");
+				window.location.assign("http://localhost:8080/IP/Search%20a%20student.jsp");
 			}
 			if(val=="2")
 			{
 				alert("in function ");
-				window.location.assign("http://localhost:8080/IP/Search%20a%20teacher.html");
+				window.location.assign("http://localhost:8080/IP/Search%20a%20teacher.jsp");
 			}
 			
 		}
@@ -74,12 +33,12 @@
 			
 			if(val=="a")
 			{
-				window.location.assign("http://localhost:8080/IP/Add%20Student.html");
+				window.location.assign("http://localhost:8080/IP/Add%20Student.jsp");
 			}
 			if(val=="b")
 			{
 				alert("in function ");
-				window.location.assign("http://localhost:8080/IP/Add%20Teacher.html");
+				window.location.assign("http://localhost:8080/IP/Add%20Teacher.jsp");
 			}
 			if(val=="c")
 			{
@@ -87,7 +46,7 @@
 			}
 			if(val=="d")
 			{
-				window.location.assign("http://localhost:8080/IP/Add%20A%20Book.html");
+				window.location.assign("http://localhost:8080/IP/Add%20A%20Book.jsp");
 			}
 		}
 		
@@ -96,18 +55,18 @@
 			
 			if(val=="1")
 			{
-				window.location.assign("http://localhost:8080/IP/Calculate%20Fine.html");
+				window.location.assign("http://localhost:8080/IP/Calculate%20Fine.jsp");
 			}
 		}
 		function check6(val)
 		{
 			if(val=="1")
 			{
-				window.location.assign("http://localhost:8080/IP/Book%20issue.html");
+				window.location.assign("http://localhost:8080/IP/Book%20issue.jsp");
 			}
 			if(val=="2")
 			{
-				window.location.assign("http://localhost:8080/IP/Book%20Return.html");
+				window.location.assign("http://localhost:8080/IP/Book%20Return.jsp");
 			}
 			
 		}
@@ -119,12 +78,23 @@
 			}
 			
 		}
-
 		</script>
 		
 	</head>
-	<body background="LMS.jpg">	
+	<body background="LMS.jpg">
+		<% 
+
+		   String a=(String)session.getAttribute("name");
+		  
+		   if(session.getAttribute("name")==null)
+		   {
+				response.sendRedirect("Welcome1.html");
+		   }
+	    	   
+		%>	
 		<h2 style="color: black;text-align:center;background-color:#6495ed">Library Managment System</h2>
+		
+		
 		<select name="menu1" style="background-color: #6495ed;margin:-5px;border: 0px;font-weight: 700;font-size: 1.4em" onChange="check1(this.value)">
 					<option value="Search" >Search</option>		
 					<option value="1">Search a Student</option>
@@ -163,99 +133,114 @@
 					
 		</select>
 		
-		
 		</br>
 		</br>
 		</br>
-		</br>
+		<option value="1">Add a Student</option>
 
-		<h2 color="Blue" align="left">Add A Teacher</h2>
-		<form name="form2" id="form2" method="POST" action="teacher">
+		</br>
+		<h2 color="Blue" align="left">Add A Book</h2>
+		</br>
+		<form name="form3" id="form3" method="POST" action="book">
+		
 		<table align="left">
 		   <tr>
-			<td>
-				Name:
+			<td >
+				Title:
 			</td> 
 			<td>
-				<input type="text" name="name1" value ="Enter your First Name" >
+				<input type="text" name="title" >
 				<br/>
 			</td>
 		   </tr>
 		   <tr>
 			<td>
-				Last Name:
+				ISBN:
 			</td>
 			<td>
-				 <input type="text" name="name2" value ="Enter your Last Name">
+				 <input type="text" name="isbn">
 				<br/>
 			</td>
 		   </tr>
 		   <tr>
 			<td>
-				Phone no:
+				Shelf No:
 			</td>
 			<td>
-				<input type="text" name="p_no" value ="Enter your Phone No">
+				<input type="text" name="s_no">
 				<br/>
 			</td>
 		   </tr>
 		   <tr>
 			<td>
-				Address :
+				Author :
 			</td>	
 			<td>
-				<input type="text" name="address" value ="Enter your Address here">
+				<input type="text" name="author">
 				<br/>
 			</td>
 		   </tr>
 		   <tr>
 			<td>
-				City:
+				Price:
 			</td>
 			<td>
-				 <input type="text" name="city" value ="Enter your City here">
+				 <input type="text" name="price">
 				<br/>
 			</td>
 		   </tr>
 		   <tr>
 			<td>
-				State:
+				Book ID:
 			</td>
 			<td>
-			<select name="country">
-				<option value=""></option>		
-				<option value="Pakistan">Pakistan</option>
-				<option value="Other">Other</option>
-			</select>
-			<br/>
-			</td>
-		   </tr>
-		   <tr>
-			<td>
-				Teacher ID:
-			</td>
-			<td>
-				<input type="text" name="id" value ="Enter your Teacher_ID">
+				<input type="text" name="b_id">
 				<br/>
 			</td>
 		   </tr>
 		   <tr>
 			<td>
-				Gender: 
+				No Of Pages:
 			</td>
 			<td>
-				<input type="radio" name="gender" value="male">Male
-				<input type="radio" name="gender" value="female">Female
-			
+				<input type="text" name="pages">
+				<br/>
+			</td>
+		   </tr>
+		   <tr>
+			<td>
+				Publisher:
+			</td>
+			<td>
+				<input type="text" name="publisher">
+				<br/>
+			</td>
+		   </tr>
+		   <tr>
+			<td>
+				Status:
+			</td>
+			<td>
+				<input type="text" name="status">
+				<br/>
+			</td>
+		   </tr>
+		   <tr>
+			<td>
+				Catogary:
+			</td>
+			<td>
+				<input type="text" name="catogary">
 				<br/>
 			</td>
 		   </tr>
 		   <tr align="center">
 			<td colspan=2>
-				<input type="submit"  value="Submit" onclick="verify()">
+				<input type="submit"  value="Add" onclick="verify()">
 			</td>
 		   </tr>
-		  
+			
+		   
 		</table>
 			
 		</form>

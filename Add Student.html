@@ -88,6 +88,71 @@
 				}
 				
 			}
+		function check1(val)
+		{
+			
+			if(val=="1")
+			{
+				window.location.assign("http://localhost:8080/IP/Search%20a%20student.html");
+			}
+			if(val=="2")
+			{
+				alert("in function ");
+				window.location.assign("http://localhost:8080/IP/Search%20a%20teacher.html");
+			}
+			
+		}
+		function check2(val)
+		{
+			
+			if(val=="a")
+			{
+				window.location.assign("http://localhost:8080/IP/Add%20Student.html");
+			}
+			if(val=="b")
+			{
+				alert("in function ");
+				window.location.assign("http://localhost:8080/IP/Add%20Teacher.html");
+			}
+			if(val=="c")
+			{
+				
+			}
+			if(val=="d")
+			{
+				window.location.assign("http://localhost:8080/IP/Add%20A%20Book.html");
+			}
+		}
+		
+		function check7(val)
+		{
+			
+			if(val=="1")
+			{
+				window.location.assign("http://localhost:8080/IP/Calculate%20Fine.html");
+			}
+		}
+		function check6(val)
+		{
+			if(val=="1")
+			{
+				window.location.assign("http://localhost:8080/IP/Book%20issue.html");
+			}
+			if(val=="2")
+			{
+				window.location.assign("http://localhost:8080/IP/Book%20Return.html");
+			}
+			
+		}
+		function check8(val)
+		{
+			if(val=="1")
+			{
+				window.location.assign("http://localhost:8080/IP/logout");
+			}
+			
+		}
+
 
 
 		</script>
@@ -100,41 +165,18 @@
 					<option value="Search" >Search</option>		
 					<option value="1">Search a Student</option>
 					<option value="2">search a Teacher</option>
-					<option value="3">search a Order</option>
-					<option value="4">search a Book</option>
 					
 		</select>
 		<select name="menu2" style="background-color: #6495ed;margin:-1px;border: 0px;font-weight: 700 ;font-size: 1.4em" onChange="check2(this.value)">
 					<option value="" >Add</option>		
 					<option value="a">Add a Student</option>
 					<option value="b">Add a Teacher</option>
-					<option value="c">Add a Order</option>
 					<option value="d">Add a Book</option>
 					
 		</select>
-		<select name="menu3" style="background-color: #6495ed;margin:-3px;border: 0px;font-weight: 700 ;font-size: 1.4em">
-					<option value="" >Delete</option>		
-					<option value="1">Delete a Book</option>
-					<option value="2">Delete a Order</option>
-					
-		</select>
-		<select name="menu4" style="background-color: #6495ed;margin:-3px;border: 0px;font-weight: 700 ;font-size: 1.4em">
-					<option value="" >View</option>		
-					<option value="1">View a Book</option>
-					<option value="2">View a Order</option>
-					<option value="3">View a Student</option>
-					<option value="4">View a Teacher</option>
-					<option value="5">View a Employee</option>
-					
-					
-		</select>
-		<select name="menu5" style="background-color: #6495ed;margin:-3px;border: 0px;font-weight: 700 ;font-size: 1.4em">
-					<option value="" >Order</option>		
-					<option value="1">Give an Order</option>
-					<option value="2">Recieve an Order</option>
-					
-		</select>
-		<select name="menu6" style="background-color: #6495ed;margin:-1px;border: 0px;font-weight: 700 ;font-size: 1.4em" onChange="check6(this.value)">
+		
+
+		<select name="menu6" style="background-color: #6495ed;margin:-3px;border: 0px;font-weight: 700 ;font-size: 1.4em" onChange="check6(this.value)">
 					<option value="" >Issue</option>		
 					<option value="1">Issue Book</option>
 					<option value="1">Return Book</option>
@@ -147,8 +189,12 @@
 					
 					
 		</select>
-		<select name="menu8" style="background-color: #6495ed;margin:-1px;border: 0px;font-weight: 700 ;font-size: 1.4em">
-					<option value="" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>		
+		<select name="menu8" style="background-color: #6495ed;margin:-1px;border: 0px;font-weight: 700 ;font-size: 1.4em" onChange="check8(this.value)">
+					<option value="" >Close Account</option>	
+					<option value="1" >Logout&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp</option>		
 					
 					
 		</select>

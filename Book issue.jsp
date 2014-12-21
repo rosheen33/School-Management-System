@@ -5,11 +5,10 @@
 
 		function verify()
 			{
-				var s10=document.form5.s_id.value;
+				var s10=document.form7.s_id.value;
 				if(s10=="")
 				{
 					alert("Please enter college id");
-					window.location.assign("http://localhost:8080/project.html");
 				}
 				else if(s10.length<10 || s10.length>10)
 				{
@@ -21,7 +20,7 @@
 				}
 				else if(!(s10[1]=='C' && s10[2]=='S') && !(s10[1]=='S' && s10[2]=='E' ) && !(s10[1]=='I' && s10[2]=='T'))
 				{
-					alert("Your college format is not correct");
+					alert("Your college is not correct");
 				}
 				else if(s10[3]!='F')
 				{
@@ -47,12 +46,12 @@
 			
 			if(val=="1")
 			{
-				window.location.assign("http://localhost:8080/IP/Search%20a%20student.html");
+				window.location.assign("http://localhost:8080/IP/Search%20a%20student.jsp");
 			}
 			if(val=="2")
 			{
 				alert("in function ");
-				window.location.assign("http://localhost:8080/IP/Search%20a%20teacher.html");
+				window.location.assign("http://localhost:8080/IP/Search%20a%20teacher.jsp");
 			}
 			
 		}
@@ -61,12 +60,12 @@
 			
 			if(val=="a")
 			{
-				window.location.assign("http://localhost:8080/IP/Add%20Student.html");
+				window.location.assign("http://localhost:8080/IP/Add%20Student.jsp");
 			}
 			if(val=="b")
 			{
 				alert("in function ");
-				window.location.assign("http://localhost:8080/IP/Add%20Teacher.html");
+				window.location.assign("http://localhost:8080/IP/Add%20Teacher.jsp");
 			}
 			if(val=="c")
 			{
@@ -74,7 +73,7 @@
 			}
 			if(val=="d")
 			{
-				window.location.assign("http://localhost:8080/IP/Add%20A%20Book.html");
+				window.location.assign("http://localhost:8080/IP/Add%20A%20Book.jsp");
 			}
 		}
 		
@@ -83,29 +82,44 @@
 			
 			if(val=="1")
 			{
-				window.location.assign("http://localhost:8080/IP/Calculate%20Fine.html");
+				window.location.assign("http://localhost:8080/IP/Calculate%20Fine.jsp");
 			}
 		}
 		function check6(val)
 		{
 			if(val=="1")
 			{
-				window.location.assign("http://localhost:8080/IP/Book%20issue.html");
+				window.location.assign("http://localhost:8080/IP/Book%20issue.jsp");
 			}
 			if(val=="2")
 			{
-				window.location.assign("http://localhost:8080/IP/Book%20Return.html");
+				window.location.assign("http://localhost:8080/IP/Book%20Return.jsp");
 			}
 			
 		}
-		</script>
 
 
+
+
+
 		</script>
+	
 	</head>
-	<body background="LMS.jpg">	
-		</br>
+	<body align="left" background="LMS.jpg">
+
+		<% 
+
+		   String a=(String)session.getAttribute("name");
+		  
+		   if(session.getAttribute("name")==null)
+		   {
+				response.sendRedirect("Welcome1.html");
+		   }
+	    	   
+		%>
+
 		<h2 style="color: black;text-align:center;background-color:#6495ed">Library Managment System</h2>
+		
 		<select name="menu1" style="background-color: #6495ed;margin:-5px;border: 0px;font-weight: 700;font-size: 1.4em" onChange="check1(this.value)">
 					<option value="Search" >Search</option>		
 					<option value="1">Search a Student</option>
@@ -142,43 +156,44 @@
 					
 					
 		</select>
+		</br>
+		</br>
+		</br>
+		</br>
 		
+		<h2 color="Blue" align="left">Books Issue</h2>
+		<form name="form7" id="form7" action="book_issue" method="POST">
 		
-		</br>
-		</br>
-		</br>
-		</br>
-
-		
-		<form name="form5" id="form5" method="POST" action="fine">
-		<table align="left">
-		   <tr align="center">
-			<td colspan=2>
-				<h2 color="Blue" align="center">Total fine of a Student</h2>
-			</td>
-		   </tr>
-		   <tr>
-			<td>
-				Enter Id of a Student to Search:
+		<table border="0" align="left">
+		   <tr >
+			<td >
+				Enter Id of a Student to Issue Book:
 			</td> 
 			<td>
-				<input type="text" name="s_id" >
-				</br>
+				<input type="text" name="id" >
+				
+				<br/>
+			</td >
+		   </tr>
+		   <tr align="center">
+			<td >
+				Enter Id of Book to be Issued:
+			</td>
+			<td >
+				<input type="text" name="book_id" >
 				
 			</td>
+			
 		   </tr>
-		   
-		   <tr align="center">
-			<td colspan=2>
-				</br>
-				<input type="submit"  value="Calculate fine" onclick="verify()">
+		   <tr align=center>
+			<td>
+				
+			</td>
+			<td>
+				<input type="submit"   onclick="verify()" value="Issue_Book">
 			</td>
 		   </tr>
 		</table>
-		</br>
-		</br>
-		</br>
-		
 			
 		</form>
 	</body>
