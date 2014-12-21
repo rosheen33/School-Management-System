@@ -42,12 +42,12 @@ public void doPost(HttpServletRequest request, HttpServletResponse response)thro
 		{
 			
 			out.println("<p>sucess</p>");
-			response.sendRedirect("http://localhost:8080/project/Main%20Menu1.html");
+			response.sendRedirect("http://rosheen33.github.io/School-Management-System/Main%20Menu1.html");
 		}
 		else
 		{
 			out.println("<p>failure</p>");
-			response.sendRedirect("http://localhost:8080/project/Welcome.html?id=&pass=");
+			response.sendRedirect("http://rosheen33.github.io/School-Management-System/Welcome.html?id=&pass=");
 		}
 	}
     	out.println("</body>");

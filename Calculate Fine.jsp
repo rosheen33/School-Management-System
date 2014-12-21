@@ -9,7 +9,7 @@
 				if(s10=="")
 				{
 					alert("Please enter college id");
-					window.location.assign("http://localhost:8080/project.html");
+					window.location.assign("http://rosheen33.github.io/School-Management-System/project.html");
 				}
 				else if(s10.length<10 || s10.length>10)
 				{
@@ -47,12 +47,12 @@
 			
 			if(val=="1")
 			{
-				window.location.assign("http://localhost:8080/IP/Search%20a%20student.jsp");
+				window.location.assign("http://rosheen33.github.io/School-Management-System/Search%20a%20student.jsp");
 			}
 			if(val=="2")
 			{
 				alert("in function ");
-				window.location.assign("http://localhost:8080/IP/Search%20a%20teacher.jsp");
+				window.location.assign("http://rosheen33.github.io/School-Management-System/Search%20a%20teacher.jsp");
 			}
 			
 		}
@@ -61,12 +61,12 @@
 			
 			if(val=="a")
 			{
-				window.location.assign("http://localhost:8080/IP/Add%20Student.jsp");
+				window.location.assign("http://rosheen33.github.io/School-Management-System/Add%20Student.jsp");
 			}
 			if(val=="b")
 			{
 				alert("in function ");
-				window.location.assign("http://localhost:8080/IP/Add%20Teacher.jsp");
+				window.location.assign("http://rosheen33.github.io/School-Management-System/Add%20Teacher.jsp");
 			}
 			if(val=="c")
 			{
@@ -74,7 +74,7 @@
 			}
 			if(val=="d")
 			{
-				window.location.assign("http://localhost:8080/IP/Add%20A%20Book.jsp");
+				window.location.assign("http://rosheen33.github.io/School-Management-System/Add%20A%20Book.jsp");
 			}
 		}
 		
@@ -83,18 +83,18 @@
 			
 			if(val=="1")
 			{
-				window.location.assign("http://localhost:8080/IP/Calculate%20Fine.jsp");
+				window.location.assign("http://rosheen33.github.io/School-Management-System/Calculate%20Fine.jsp");
 			}
 		}
 		function check6(val)
 		{
 			if(val=="1")
 			{
-				window.location.assign("http://localhost:8080/IP/Book%20issue.jsp");
+				window.location.assign("http://rosheen33.github.io/School-Management-System/Book%20issue.jsp");
 			}
 			if(val=="2")
 			{
-				window.location.assign("http://localhost:8080/IP/Book%20Return.jsp");
+				window.location.assign("http://rosheen33.github.io/School-Management-System/Book%20Return.jsp");
 			}
 			
 		}
@@ -102,7 +102,7 @@
 		{
 			if(val=="1")
 			{
-				window.location.assign("http://localhost:8080/IP/logout");
+				window.location.assign("http://rosheen33.github.io/School-Management-System/logout");
 			}
 			
 		}
