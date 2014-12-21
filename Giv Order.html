@@ -1,0 +1,150 @@
+<head>
+<style>
+a:link {color: Black;}    /* unvisited link */
+a:visited {color:GhostWhite ;} /* visited link */
+a:hover {color:Black;}   /* mouse over link */
+a:active {color:GhostWhite ;}  /* selected link */
+</style>
+<script type="text/javascript">
+
+		function verify()
+			{
+				alert("in function");
+				var s1=document.form4.orderid.value;
+				if(s1=="")
+				{
+					alert("Name is empty");
+				}
+				var s2=document.form4.ISBN.value;
+				if(s2=="")
+				{
+					alert("ISBN is empty");
+				}
+				
+				else if()
+				{
+				}
+				var s1=document.form4.quantity.value;
+				if(s1=="")
+				{
+					alert("quantity is empty");
+				}
+				
+								
+				
+			}
+
+
+		</script>
+
+</head>
+	<body background="LMS.jpg">	
+		<h2 style="color: black;text-align:center;background-color:#6495ed">Library Managment System</h2>
+		</br>
+		
+		<select name="menu1" style="background-color: #6495ed;margin:-5px;border: 0px;font-weight: 700;font-size: 1.4em" >
+					<option value="Search" >Search</option>		
+					<option value="1">Search a Student</option>
+					<option value="2">search a Teacher</option>
+					<option value="3">search a Order</option>
+					<option value="4">search a Book</option>
+					
+		</select>
+		<select name="menu2" style="background-color: #6495ed;margin:-1px;border: 0px;font-weight: 700 ;font-size: 1.4em">
+					<option value="" >Add</option>		
+					<option value="1">Add a Student</option>
+					<option value="2">Add a Teacher</option>
+					<option value="3">Add a Order</option>
+					<option value="4">Add a Book</option>
+					
+		</select>
+		<select name="menu3" style="background-color: #6495ed;margin:-3px;border: 0px;font-weight: 700 ;font-size: 1.4em">
+					<option value="" >Delete</option>		
+					<option value="1">Delete a Book</option>
+					<option value="2">Delete a Order</option>
+					
+		</select>
+		<select name="menu4" style="background-color: #6495ed;margin:-3px;border: 0px;font-weight: 700 ;font-size: 1.4em">
+					<option value="" >View</option>		
+					<option value="1">View a Book</option>
+					<option value="2">View a Order</option>
+					<option value="3">View a Student</option>
+					<option value="4">View a Teacher</option>
+					<option value="5">View a Employee</option>
+					
+					
+		</select>
+		<select name="menu5" style="background-color: #6495ed;margin:-3px;border: 0px;font-weight: 700 ;font-size: 1.4em">
+					<option value="" >Order</option>		
+					<option value="1">Give an Order</option>
+					<option value="2">Recieve an Order</option>
+					
+		</select>
+		<select name="menu6" style="background-color: #6495ed;margin:-1px;border: 0px;font-weight: 700 ;font-size: 1.4em">
+					<option value="" >Issue</option>		
+					<option value="1">Issue Book</option>
+					
+					
+		</select>
+		<select name="menu7" style="background-color: #6495ed;margin:-3px;border: 0px;font-weight: 700 ;font-size: 1.4em">
+					<option value="" >Fine</option>		
+					<option value="1">Calculate fine</option>
+					
+					
+		</select>
+		<select name="menu8" style="background-color: #6495ed;margin:-3px;border: 0px;font-weight: 700 ;font-size: 1.4em">
+					<option value="" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>		
+					
+					
+		</select>
+		</br>
+		<option value="1">Add a Student</option>
+
+		</br>
+
+		<h2 color="Blue" align="left">Give Order</h2>
+		</br>
+		<form name="form4" id="form4" action="give" method="POST">
+		<table>
+		   <tr>
+			<td>
+				Order ID:
+			</td> 
+			<td>
+				<input type="text" name="orderid" >
+				<br/>
+			</td>
+		   </tr>
+		   <tr>
+			<td>
+				ISBN:
+			</td>
+			<td>
+				 <input type="text" name="ISBN">
+				<br/>
+			</td>
+		   </tr>
+		  
+			
+		   <tr>
+			<td>
+				Quantity :
+			</td>	
+			<td>
+				<input type="text" name="quantity">
+				<br/>
+			</td>
+		   </tr>
+		   
+			
+		   
+		   <tr>
+			<td colspan=2>
+				<input type="submit"  value="Add" onclick="verify()">
+			</td>
+		   </tr>
+		</table>
+		
+		</form>
+	</body>
+</html>

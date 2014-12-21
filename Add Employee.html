@@ -1,0 +1,238 @@
+<html>
+<head>
+			
+<style>
+a:link {color: Black;}    /* unvisited link */
+a:visited {color:GhostWhite ;} /* visited link */
+a:hover {color:Black;}   /* mouse over link */
+a:active {color:GhostWhite ;}  /* selected link */
+</style>
+</head>
+
+</style>
+		<script type="text/javascript">
+
+		function verify()
+			{
+				alert("in function");
+				if (!document.form1.gender[0].checked && !document.form1.gender[1].checked)
+				{
+					alert("Please choose a Gender");
+				}
+				var s1=document.form1.f_name.value;
+				if(s1.length>20 || s1=="")
+				{
+					alert("Name is either empty or have characters greater than 20");
+				}
+				var s2=document.form1.l_name.value;
+				if(s2=="" || s2.length>20)
+				{
+					alert("Last Name is either empty or have characters greater than 20");
+				}
+				var s3=document.form1.address.value;
+				for(i=0;i<s3.length;i++)
+				{
+					if((s3[i]>='a' && s3[i]<='z') || s3[i]=='@' || s3[i]=='%' || s3[i]=='$' || s3[i]=='+' || s3[i]=='-' || s3[i]=='?')
+					{
+						alert("Address can not include small letters or symbols");
+						break;
+					}
+					
+				}
+				
+				if ( document.form1.country.value == "" )
+				{
+					
+					alert("Please select a country");
+				}
+				var s8=document.form1.phone.value;
+				var i=0;
+				for(i=0;i<s8.length;i++)
+				{
+					if(!(s8[i]>='0' && s8[i]<='9'))
+					{
+						alert("Phone number can only contain digits");
+						break;
+					}
+					if(i>10)
+					{
+						alert("Phone number can only contain 11 digits");
+						break;
+					}
+				}
+				var s10=document.form1.emp_id.value;
+				if(s10=="")
+				{
+					alert("Please enter college id");
+				}
+				var s11=document.form1.salaray.value;
+				if(s11=="")
+				{
+					alert("Please enter salary");
+
+				}
+				
+				else
+				{
+					var i=0;
+					for(i=0;i<s11.length;i++)
+					{
+						if(!(s11[i]>='0' && s11[i]<='9'))
+						{
+							alert("Salaray can only contain digits");
+						}
+					}
+
+						
+				}
+				var s12=document.form1.nic.value;
+				if(s12=="")
+				{
+					alert("Please enter NIC");
+				}
+				else if(s12.length<15 || s10.length>15)
+				{
+					alert("Your nic be should of exactly of 15 characters");
+				}
+				else if(!(s12[0]>='0' && s12[0]<='9') || !(s12[1]>='0' && s12[1]<='9') || !(s12[2]>='0' && s12[2]<='9') || !(s12[3]>='0' && s12[3]<='9') || !(s12[4]>='0' && s12[4]<='9') || !(s12[6]>='0' && s12[6]<='9') || !(s12[7]>='0' && s12[7]<='9') || !(s12[8]>='0' && s12[8]<='9') || !(s12[9]>='0' && s12[9]<='9') || !(s12[10]>='0' && s12[10]<='9') || !(s12[11]>='0' && s12[11]<='9') || !(s12[12]>='0' && s12[12]<='9') || !(s12[14]>='0' && s12[14]<='9'))
+				{
+					alert("Your nic character should be numeric");
+				}
+				else if(!(s12[5]=='-' && s12[5]=='-') && !(s12[13]=='-' && s12[13]=='-' ) )
+				{
+					alert("Your nic is not correct");
+				}
+								
+				
+			}
+
+
+		</script>
+	</head>	
+	<body background="LMS.jpg">	
+		<h2 style="color: black;text-align:center;background-color:#6495ed">Library Managment System</h2>
+		</br>
+		
+		<h2 style="background-color:#6495ed"><b><a href="default.asp" target="_blank">Search</a></b>
+		&nbsp;
+		<b><a href="default.asp" target="_blank">Add</a></b>
+		&nbsp;
+		<b><a href="default.asp" target="_blank">Fine</a></b>
+		&nbsp;
+		<b><a href="default.asp" target="_blank">Issue Book</a></b>
+		&nbsp;
+		<b><a href="default.asp" target="_blank">Order</a></b>
+		&nbsp;
+		<b><a href="default.asp" target="_blank">View</a></b></h2>
+		</br>
+		<h2 color="Blue" align="left">Add A Employee</h2>
+		</br>
+		<form name="form1" id="form1" action="employee" method="POST">
+		<table>
+		   <h1><tr>
+			<h1><td>
+				First Name:
+			</td></h1> 
+			<h1><td>
+				<input type="text" name="f_name" >
+				<br/>
+			</td></h1>
+		   </h1></tr>
+		   <tr>
+			<td>
+				Last Name:
+			</td>
+			<td>
+				 <input type="text" name="l_name">
+				<br/>
+			</td>
+		   </tr>
+		   <tr>
+			<td>
+				Employee ID:
+			</td>
+			<td>
+				<input type="text" name="emp_id">
+				<br/>
+			</td>
+		   </tr>
+		   <tr>
+			<td>
+				Salaray :
+			</td>	
+			<td>
+				<input type="text" name="salaray">
+				<br/>
+			</td>
+		   </tr>
+		   <tr>
+			<td>
+				NIC:
+			</td>
+			<td>
+				 <input type="text" name="nic">
+				<br/>
+			</td>
+		   </tr>
+		   <tr>
+			<td>
+				Phone number:
+			</td>
+			<td>
+				<input type="text" name="phone">
+				<br/>
+			</td>
+		   </tr>
+		   <tr>
+			<td>
+				Address:
+			</td>
+			<td>
+				<input type="text" name="address" >
+			</td>
+		   </tr>
+		   <tr>
+			<td>
+				City:
+			</td>
+			<td>
+				<input type="text" name="city">
+				<br/>
+			</td>
+		   </tr>
+		   <tr>
+			<td>
+				State:
+			</td>
+
+			<td>
+				<select name="country">
+				<option value=""></option>		
+				<option value="Pakistan">Pakistan</option>
+				<option value="Other">Other</option>
+			</select>
+			</td>
+		   </tr>
+		   <tr>
+			<td>
+				Gender:
+			</td>
+			<td>
+				<input type="radio" name="gender" value="male">Male
+				<input type="radio" name="gender" value="female">Female
+				<br/>
+			</td>
+		   </tr>
+		   <tr>
+			<td colspan=2>
+				<input type="submit"  value="Submit" onclick="verify()">
+			</td>
+		   </tr>
+			
+			
+		</table>
+			
+		</form>
+		</div>
+	</body>
+</html>

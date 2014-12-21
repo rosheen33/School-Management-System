@@ -3,53 +3,56 @@
 		<title >Form</title>
 		<script type="text/javascript">
 
+		function verify()
+			{	
+				
+				
+			}
 
 
 		</script>
 	</head>
 	<body background="LMS.jpg">
 		</br>	
-		
-		
+		</br>
+		</br>
+		<h1 style="color: black;text-align:center;background-color:#6495ed">Welcome to Library Managment System</h1>
 		<p></p>
 		</br>
 		</br>
 		<form name="form7" id="form7" method="POST" action="login">
 		
 		<table border="0" align="center">
-		    <tr >
-			<td align=center>
-				<input type="button"   value=""  style="height:110px; width:110px;background: url(logo.png)">
-				</br>
-				
-			</td >
-		   </tr>
-		   <tr>
+		   <tr >
+			<td >
+				UserName:
+			</td> 
 			<td>
-				<h1 style="color: black;text-align:center;background-color:#6495ed">Welcome to Library Managment System</h1>
-			</td>
-		   </tr>
-		   <tr > 
-			<td align=center>
-				UserName:<input type="text" name="id" >
+				<input type="text" name="id" >
 				
-				</br>
+				<br/>
 			</td >
 		   </tr>
 		   <tr align="center">
 			<td >
-				Password:<input type="password" name="pass" >
+				Password:
+			</td>
+			<td >
+				<input type="password" name="pass" >
 				
 			</td>
 			
 		   </tr>
 		   <tr align=center>
 			<td>
-				<input type="submit"    value="Login">
+				
+			</td>
+			<td>
+				<input type="submit"   onclick="verify()" value="Login">
 			</td>
 		   </tr>
 		</table>
 			
 		</form>
 	</body>
-</html>    
+</html>

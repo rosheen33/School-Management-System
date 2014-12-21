@@ -1,17 +1,16 @@
-<html>
-	<head>
-		<title >LMS</title>
-		<script type="text/javascript">
-
-
-
-		</script>
-		
-	</head>
+<head>
+<style>
+a:link {color: Black;}    /* unvisited link */
+a:visited {color:GhostWhite ;} /* visited link */
+a:hover {color:Black;}   /* mouse over link */
+a:active {color:GhostWhite ;}  /* selected link */
+</style>
+</head>
 	<body background="LMS.jpg">	
-		
 		<h2 style="color: black;text-align:center;background-color:#6495ed">Library Managment System</h2>
-		<select name="menu1" style="background-color: #6495ed;margin:-5px;border: 0px;font-weight: 700;font-size: 1.4em" onChange="check1(this.value)">
+		</br>
+		
+		<select name="menu1" style="background-color: #6495ed;margin:-5px;border: 0px;font-weight: 700;font-size: 1.4em" >
 					<option value="Search" >Search</option>		
 					<option value="1">Search a Student</option>
 					<option value="2">search a Teacher</option>
@@ -19,12 +18,12 @@
 					<option value="4">search a Book</option>
 					
 		</select>
-		<select name="menu2" style="background-color: #6495ed;margin:-1px;border: 0px;font-weight: 700 ;font-size: 1.4em" onChange="check2(this.value)">
+		<select name="menu2" style="background-color: #6495ed;margin:-1px;border: 0px;font-weight: 700 ;font-size: 1.4em">
 					<option value="" >Add</option>		
-					<option value="a">Add a Student</option>
-					<option value="b">Add a Teacher</option>
-					<option value="c">Add a Order</option>
-					<option value="d">Add a Book</option>
+					<option value="1">Add a Student</option>
+					<option value="2">Add a Teacher</option>
+					<option value="3">Add a Order</option>
+					<option value="4">Add a Book</option>
 					
 		</select>
 		<select name="menu3" style="background-color: #6495ed;margin:-3px;border: 0px;font-weight: 700 ;font-size: 1.4em">
@@ -49,48 +48,40 @@
 					<option value="2">Recieve an Order</option>
 					
 		</select>
-		<select name="menu6" style="background-color: #6495ed;margin:-1px;border: 0px;font-weight: 700 ;font-size: 1.4em" onChange="check6(this.value)">
+		<select name="menu6" style="background-color: #6495ed;margin:-1px;border: 0px;font-weight: 700 ;font-size: 1.4em">
 					<option value="" >Issue</option>		
 					<option value="1">Issue Book</option>
-					<option value="1">Return Book</option>
 					
 					
 		</select>
-		<select name="menu7" style="background-color: #6495ed;margin:-3px;border: 0px;font-weight: 700 ;font-size: 1.4em" onChange="check7(this.value)">
+		<select name="menu7" style="background-color: #6495ed;margin:-3px;border: 0px;font-weight: 700 ;font-size: 1.4em">
 					<option value="" >Fine</option>		
 					<option value="1">Calculate fine</option>
 					
 					
 		</select>
-		<select name="menu8" style="background-color: #6495ed;margin:-1px;border: 0px;font-weight: 700 ;font-size: 1.4em">
-					<option value="" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>		
+		<select name="menu8" style="background-color: #6495ed;margin:-3px;border: 0px;font-weight: 700 ;font-size: 1.4em">
+					<option value="" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>		
 					
 					
 		</select>
-		
 		</br>
+		<option value="1">Add a Student</option>
+
 		</br>
-		</br>
-		</br>
-		<h2 color="Blue" align="left">Search a Student</h2>
-		<form name="form4" id="form4" action="searchs" method="POST">
-		<table align="left">
-		   <tr>
-			<td>
-				Enter Id of a Student to Search:
-			</td> 
-			<td>
-				<input type="text" name="s_id" >
-				<input type="submit"   value=""  style="height:28px; width:28px;background: url(s.png)">
-				<br/>
+
+		<h2 color="Blue" align="left">View Employees</h2>
+		<form name="form4" id="form4" action="semployee" method="POST">
+		<table>
+		   
+			<tr>
+			<td colspan=2>
+				
+				<input type="submit"  value="View" onclick="ok()">
 			</td>
 		   </tr>
-		   
-		   
 		</table>
-		</br>
 		
-			
 		</form>
 	</body>
 </html>
